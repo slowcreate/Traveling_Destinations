@@ -1,3 +1,7 @@
+---
+import background from '../assets/background.svg';
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -7,8 +11,11 @@
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro Basics</title>
+		<link rel="stylesheet" href="/src/styles/global.css" />
 	</head>
 	<body>
+		<img id="background" src={background.src} alt="" fetchpriority="high" />
+
 		<slot />
 	</body>
 </html>
