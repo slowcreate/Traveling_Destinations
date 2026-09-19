@@ -12,12 +12,13 @@
     "astro": "astro",
     "start": "node server.cjs"
   },
-
   "dependencies": {
+    "@tailwindcss/vite": "^4.3.3",
     "astro": "^7.3.2",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
-    "pg": "^8.23.0"
+    "pg": "^8.23.0",
+    "tailwindcss": "^4.3.3"
   },
   "allowScripts": {
     "esbuild": true
