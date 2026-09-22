@@ -26,11 +26,11 @@
   }
 
   .font-p---sm {
-    @apply font-inter text-xs font-light text-blue-500;
+    @apply font-inter text-xs font-light text-blue-700;
   }
 
   .font-p---lg {
-    @apply font-inter text-lg font-normal text-blue-950;
+    @apply font-inter text-base font-normal text-blue-800;
   }
 
   .font-h6---desk {
@@ -50,11 +50,11 @@
   }
 
   .font-h2---desk {
-    @apply font-canela-trial text-4xl font-light text-blue-800;
+    @apply font-canela-trial text-4xl font-light text-indigo-800;
   }
 
   .font-h1---desk {
-    @apply font-canela-trial text-5xl font-bold text-blue-800;
+    @apply font-canela-trial text-5xl font-bold text-indigo-500;
   }
 
 }

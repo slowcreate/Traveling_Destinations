@@ -3,20 +3,20 @@ import Button from './Button.astro';
 import Input from './Input.astro';
 ---
 
-<div id="container" class="flex min-h-screen items-center justify-end px-12 py-12 text-blue-950 sm:px-6">
+<div id="container" class="flex min-h-screen items-center justify-end px-58 py-12 text-blue-950 sm:px-24 xs:justify-center xl:justify-center">
   <main class="flex w-full max-w-7xl justify-end">
     <section id="login" class="card w-full max-w-md">
-      <h1 class="font-h2---desk mb-2 text-blue-800">
+      <h1 class="font-h2---desk mb-2">
         Login
       </h1>
-      <p class="font-p---sm mb-8 pr-24 text-blue-500">
+      <p class="font-p---lg mb-8 pr-4">
         Want to log your next dream travel destination, enter email and password
       </p>
       <form action="http://localhost:3000/login" method="POST" class="space-y-4">
         <div class="space-y-2">
-          <label for="email" class="font-h6---desk block text-blue-950">
+          <!-- <label for="email" class="font-h6---desk block text-blue-950">
             Email:
-          </label>
+          </label> -->
           <Input
             type="email"
             id="email"
@@ -28,9 +28,9 @@ import Input from './Input.astro';
         </div>
 
         <div class="space-y-2">
-          <label for="password" class="font-h6---desk block text-blue-950">
+          <!-- <label for="password" class="font-h6---desk block text-blue-950">
             Password:
-          </label>
+          </label> -->
 
           <Input
             type="password"

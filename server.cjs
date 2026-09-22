@@ -12,10 +12,6 @@ function normalizeEmail(email) {
   return email.trim().toLowerCase();
 }
 
-app.get('/', (req, res) => {
-  res.send('Travel Destinations API');
-});
-
 // Register a new user
 app.post('/register', async (req, res) => {
   try {
@@ -48,7 +44,6 @@ app.post('/register', async (req, res) => {
 
     const normalizedEmail = normalizeEmail(email);
 
-    // Convert the real password into a secure, irreversible hash.
     const passwordHash = await argon2.hash(password, {
       type: argon2.argon2id,
       memoryCost: 19456,
@@ -84,7 +79,7 @@ app.post('/register', async (req, res) => {
   }
 });
 
-// Check a user's login details
+// Log in an existing user
 app.post('/login', async (req, res) => {
   try {
     const { email, password } = req.body;
@@ -119,7 +114,6 @@ app.post('/login', async (req, res) => {
       });
     }
 
-    // Compare the entered password with the stored Argon2 hash.
     const passwordIsCorrect = await argon2.verify(
       user.password_hash,
       password
@@ -131,116 +125,13 @@ app.post('/login', async (req, res) => {
       });
     }
 
-    return res.status(200).json({
-      message: 'Login successful',
-      user: {
-        id: user.id,
-        email: user.email,
-      },
-    });
+    // Password was correct: go to src/pages/index.astro
+    return res.redirect('http://localhost:4322/');
   } catch (error) {
     console.error('Login error:', error);
 
     return res.status(500).json({
       message: 'Could not log in',
-    });
-  }
-});
-
-// Get all destinations
-app.get('/destinations', async (req, res) => {
-  try {
-    const result = await pool.query(
-      `
-        SELECT id, country, city
-        FROM public.traveldestinations
-        ORDER BY id
-      `
-    );
-
-    return res.status(200).json(result.rows);
-  } catch (error) {
-    console.error('Get destinations error:', error);
-
-    return res.status(500).json({
-      message: 'Could not retrieve destinations',
-    });
-  }
-});
-
-// Create a destination
-app.post('/destinations', async (req, res) => {
-  try {
-    const { country, city } = req.body;
-
-    if (
-      typeof country !== 'string' ||
-      typeof city !== 'string' ||
-      !country.trim() ||
-      !city.trim()
-    ) {
-      return res.status(400).json({
-        message: 'Country and city are required',
-      });
-    }
-
-    const result = await pool.query(
-      `
-        INSERT INTO public.traveldestinations (country, city)
-        VALUES ($1, $2)
-        RETURNING id, country, city
-      `,
-      [country.trim(), city.trim()]
-    );
-
-    return res.status(201).json({
-      message: 'Destination created',
-      destination: result.rows[0],
-    });
-  } catch (error) {
-    console.error('Create destination error:', error);
-
-    return res.status(500).json({
-      message: 'Could not create destination',
-    });
-  }
-});
-
-// Delete a destination
-app.delete('/destinations/:id', async (req, res) => {
-  try {
-    const destinationId = Number.parseInt(req.params.id, 10);
-
-    if (!Number.isInteger(destinationId)) {
-      return res.status(400).json({
-        message: 'Invalid destination ID',
-      });
-    }
-
-    const result = await pool.query(
-      `
-        DELETE FROM public.traveldestinations
-        WHERE id = $1
-        RETURNING id, country, city
-      `,
-      [destinationId]
-    );
-
-    if (!result.rows[0]) {
-      return res.status(404).json({
-        message: 'Destination not found',
-      });
-    }
-
-    return res.status(200).json({
-      message: 'Destination deleted',
-      destination: result.rows[0],
-    });
-  } catch (error) {
-    console.error('Delete destination error:', error);
-
-    return res.status(500).json({
-      message: 'Could not delete destination',
     });
   }
 });
