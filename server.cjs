@@ -19,13 +19,15 @@ app.get('/', (req, res) => {
 // Register a new user
 app.post('/register', async (req, res) => {
   try {
-    const { email, password } = req.body;
+    const { email, password, confirmPassword } = req.body;
 
     if (
       typeof email !== 'string' ||
       typeof password !== 'string' ||
+      typeof confirmPassword !== 'string' ||
       !email.trim() ||
-      !password
+      !password ||
+      !confirmPassword
     ) {
       return res.status(400).json({
         message: 'Email and password are required',
@@ -35,6 +37,12 @@ app.post('/register', async (req, res) => {
     if (password.length < 12) {
       return res.status(400).json({
         message: 'Password must contain at least 12 characters',
+      });
+    }
+
+    if (password !== confirmPassword) {
+      return res.status(400).json({
+        message: 'Passwords do not match',
       });
     }
 
