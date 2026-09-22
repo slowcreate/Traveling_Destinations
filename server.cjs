@@ -125,7 +125,6 @@ app.post('/login', async (req, res) => {
       });
     }
 
-    // Password was correct: go to src/pages/index.astro
     return res.redirect('http://localhost:4322/');
   } catch (error) {
     console.error('Login error:', error);
