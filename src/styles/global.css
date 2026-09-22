@@ -54,7 +54,7 @@
   }
 
   .font-h1---desk {
-    @apply font-canela-trial text-5xl font-bold text-indigo-500;
+    @apply font-canela-trial text-5xl font-bold text-indigo-800;
   }
 
 }
