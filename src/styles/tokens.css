@@ -1,42 +1,42 @@
 
 
 @theme {
-/* Purple */
-  --color-purple-50: #fef9fe;
-  --color-purple-100: #f9f0fa;
-  --color-purple-200: #f2e4f5;
-  --color-purple-300: #ebd6f0;
-  --color-purple-400: #e5caec;
-  --color-purple-500: #dfbee8;
-  --color-purple-600: #c078d0;
-  --color-purple-700: #9743a7;
-  --color-purple-800: #5c2b65;
-  --color-purple-900: #301934;
-  --color-purple-950: #211223;
+  /* Purple */
+  --color-purple-50: #fefafe;
+  --color-purple-100: #faf2fb;
+  --color-purple-200: #f4e7f7;
+  --color-purple-300: #efdbf3;
+  --color-purple-400: #ead0f0;
+  --color-purple-500: #e5c5ed;
+  --color-purple-600: #ca82d9;
+  --color-purple-700: #a44ab4;
+  --color-purple-800: #693073;
+  --color-purple-900: #38193d;
+  --color-purple-950: #251028;
 
   /* Indigo */
-  --color-indigo-50: #ebeafd;
-  --color-indigo-100: #dbdafb;
-  --color-indigo-200: #b9b8f8;
-  --color-indigo-300: #9a98f4;
-  --color-indigo-400: #7875f2;
-  --color-indigo-500: #5e59f0;
-  --color-indigo-600: #3e36ee;
-  --color-indigo-700: #2110e7;
-  --color-indigo-800: #180b94;
-  --color-indigo-900: #110653;
-  --color-indigo-950: #0c0336;
+  --color-indigo-50: #eeedfe;
+  --color-indigo-100: #e0dffd;
+  --color-indigo-200: #c1c0fc;
+  --color-indigo-300: #a4a2fa;
+  --color-indigo-400: #8480f9;
+  --color-indigo-500: #6a63f8;
+  --color-indigo-600: #483df7;
+  --color-indigo-700: #270af1;
+  --color-indigo-800: #1b07a3;
+  --color-indigo-900: #100461;
+  --color-indigo-950: #0a0240;
 
   /* Blue */
-  --color-blue-50: #ebeafd;
-  --color-blue-100: #e4e8f7;
-  --color-blue-200: #c9d2ed;
-  --color-blue-300: #afbde4;
-  --color-blue-400: #95a9dd;
-  --color-blue-500: #7b95d4;
-  --color-blue-600: #486ebf;
-  --color-blue-700: #334e83;
-  --color-blue-800: #233353;
-  --color-blue-900: #151d2e;
-  --color-blue-950: #10151f;
+  --color-blue-50: #eeedfe;
+  --color-blue-100: #e7ebf9;
+  --color-blue-200: #cfd8f1;
+  --color-blue-300: #b7c5ea;
+  --color-blue-400: #9fb2e4;
+  --color-blue-500: #85a0dd;
+  --color-blue-600: #4f7acb;
+  --color-blue-700: #395891;
+  --color-blue-800: #263a60;
+  --color-blue-900: #152035;
+  --color-blue-950: #0e1523;
 }

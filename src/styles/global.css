@@ -16,40 +16,44 @@
 }
 
 @layer utilities {
+  .card {
+    @apply rounded-3xl border border-purple-100 bg-purple-50 p-6 shadow-2xl shadow-blue-950/15 sm:p-10;
+  }
+
   .font-button-text {
-    @apply font-inter text-sm font-semibold;
+    @apply font-inter text-sm font-semibold text-white;
   }
 
   .font-p---sm {
-    @apply font-inter text-xs font-light;
+    @apply font-inter text-xs font-light text-blue-500;
   }
 
   .font-p---lg {
-    @apply font-inter text-lg font-normal;
+    @apply font-inter text-lg font-normal text-blue-950;
   }
 
   .font-h6---desk {
-    @apply font-inter text-base font-medium;
+    @apply font-inter text-base font-medium text-blue-950;
   }
 
   .font-h5---desk {
-    @apply font-canela-trial text-xl font-bold;
+    @apply font-canela-trial text-xl font-bold text-purple-800;
   }
 
   .font-h4---desk {
-    @apply font-canela-trial text-3xl font-normal;
+    @apply font-canela-trial text-3xl font-normal text-purple-800;
   }
 
   .font-h3---desk {
-    @apply font-inter text-3xl font-semibold;
+    @apply font-inter text-3xl font-semibold text-blue-950;
   }
 
   .font-h2---desk {
-    @apply font-canela-trial text-4xl font-light;
+    @apply font-canela-trial text-4xl font-light text-purple-800;
   }
 
   .font-h1---desk {
-    @apply font-canela-trial text-5xl font-bold;
+    @apply font-canela-trial text-5xl font-bold text-purple-800;
   }
 
 }
