@@ -1,18 +1,18 @@
 
 
 @theme {
-  /* Purple */
-  --color-purple-50: #fefafe;
-  --color-purple-100: #faf2fb;
-  --color-purple-200: #f4e7f7;
-  --color-purple-300: #efdbf3;
-  --color-purple-400: #ead0f0;
-  --color-purple-500: #e5c5ed;
-  --color-purple-600: #ca82d9;
-  --color-purple-700: #a44ab4;
-  --color-purple-800: #693073;
-  --color-purple-900: #38193d;
-  --color-purple-950: #251028;
+  /* Pink */
+  --color-pink-50: #fefafe;
+  --color-pink-100: #faf2fb;
+  --color-pink-200: #f4e7f7;
+  --color-pink-300: #efdbf3;
+  --color-pink-400: #ead0f0;
+  --color-pink-500: #e5c5ed;
+  --color-pink-600: #ca82d9;
+  --color-pink-700: #a44ab4;
+  --color-pink-800: #693073;
+  --color-pink-900: #38193d;
+  --color-pink-950: #251028;
 
   /* Indigo */
   --color-indigo-50: #eeedfe;

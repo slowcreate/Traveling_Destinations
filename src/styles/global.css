@@ -1,14 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600;700&display=swap");
 @import "tailwindcss";
 @import "./tokens.css";
 
-@font-face {
+/* @font-face {
   font-family: "Canela Trial";
   src: url("/fonts/CanelaTrial-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-}
+} */
 
 @theme {
   --font-inter: "Inter", sans-serif;
@@ -17,7 +18,7 @@
 
 @layer utilities {
   .card {
-    @apply rounded-3xl border border-purple-100 bg-purple-50 p-6 shadow-2xl shadow-blue-950/15 sm:p-10;
+    @apply rounded-3xl border border-blue-100 bg-blue-50 p-6 shadow-2xl shadow-blue-950/15 sm:p-10;
   }
 
   .font-button-text {
@@ -33,15 +34,15 @@
   }
 
   .font-h6---desk {
-    @apply font-inter text-base font-medium text-blue-950;
+    @apply font-inter text-sm font-medium text-indigo-800;
   }
 
   .font-h5---desk {
-    @apply font-canela-trial text-xl font-bold text-purple-800;
+    @apply font-canela-trial text-xl font-bold text-blue-800;
   }
 
   .font-h4---desk {
-    @apply font-canela-trial text-3xl font-normal text-purple-800;
+    @apply font-canela-trial text-3xl font-normal text-blue-800;
   }
 
   .font-h3---desk {
@@ -49,11 +50,11 @@
   }
 
   .font-h2---desk {
-    @apply font-canela-trial text-4xl font-light text-purple-800;
+    @apply font-canela-trial text-4xl font-light text-blue-800;
   }
 
   .font-h1---desk {
-    @apply font-canela-trial text-5xl font-bold text-purple-800;
+    @apply font-canela-trial text-5xl font-bold text-blue-800;
   }
 
 }

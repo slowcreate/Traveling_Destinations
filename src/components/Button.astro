@@ -10,11 +10,10 @@ const {
 } = Astro.props;
 
 const buttonClasses = [
-  'font-button-text',
-  'flex h-12 w-full items-center justify-center rounded-xl bg-purple-800 px-5 text-white',
-  'transition hover:bg-purple-900',
-  'focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-indigo-200',
-  'active:bg-purple-950',
+  'font-button-text flex h-12 w-full items-center justify-center rounded-xl bg-indigo-800 px-5 text-white',
+  'transition hover:bg-indigo-900',
+  'focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-200',
+  'active:bg-indigo-950',
   className,
 ].filter(Boolean).join(' ');
 ---

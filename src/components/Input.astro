@@ -1,0 +1,39 @@
+---
+interface Props {
+  type?: 'text' | 'email' | 'password';
+  id: string;
+  name: string;
+  autocomplete?: string;
+  minlength?: number;
+  required?: boolean;
+  placeholder?: string;
+  class?: string;
+}
+
+const {
+  type = 'text',
+  id,
+  name,
+  autocomplete,
+  minlength,
+  required = false,
+  placeholder,
+  class: className = '',
+} = Astro.props;
+
+const inputClasses = [
+  'block h-12 w-full rounded-xl border-0 bg-white px-5 text-base text-blue-950 shadow-[0_3px_9px_rgba(14,21,35,0.25)] outline-none transition placeholder:text-blue-950/30 hover:shadow-[0_4px_11px_rgba(14,21,35,0.28)] focus:ring-4 focus:ring-indigo-200',
+  className,
+].filter(Boolean).join(' ');
+---
+
+<input
+  type={type}
+  id={id}
+  name={name}
+  autocomplete={autocomplete}
+  minlength={minlength}
+  required={required}
+  placeholder={placeholder}
+  class={inputClasses}
+/>

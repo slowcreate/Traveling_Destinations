@@ -1,11 +1,12 @@
 ---
 import Button from './Button.astro';
+import Input from './Input.astro';
 ---
 
 <div id="container" class="flex min-h-screen items-center justify-end px-12 py-12 text-blue-950 sm:px-6">
   <main class="flex w-full max-w-7xl justify-end">
     <section id="login" class="card w-full max-w-md">
-      <h1 class="font-h2---desk mb-2 text-purple-800">
+      <h1 class="font-h2---desk mb-2 text-blue-800">
         Login
       </h1>
       <p class="font-p---sm mb-8 pr-24 text-blue-500">
@@ -16,13 +17,13 @@ import Button from './Button.astro';
           <label for="email" class="font-h6---desk block text-blue-950">
             Email:
           </label>
-          <input
+          <Input
             type="email"
             id="email"
             name="email"
             autocomplete="email"
             required
-            class="block h-12 w-full rounded-xl border border-blue-200 bg-blue-50 px-4 text-base text-blue-950 outline-none transition placeholder:text-blue-500 hover:border-indigo-400 focus:border-indigo-600 focus:ring-4 focus:ring-indigo-200"
+            placeholder="Email:"
           />
         </div>
 
@@ -31,13 +32,13 @@ import Button from './Button.astro';
             Password:
           </label>
 
-          <input
+          <Input
             type="password"
             id="password"
             name="password"
             autocomplete="current-password"
             required
-            class="block h-12 w-full rounded-xl border border-blue-200 bg-blue-50 px-4 text-base text-blue-950 outline-none transition placeholder:text-blue-500 hover:border-indigo-400 focus:border-indigo-600 focus:ring-4 focus:ring-indigo-200"
+            placeholder="Password:"
           />
         </div>
 
@@ -45,7 +46,7 @@ import Button from './Button.astro';
           Login
         </Button>
     </form>
-  <div class="mt-6 flex flex-col items-center gap-1 text-center text-purple-800">
+  <div class="mt-6 flex flex-col items-center gap-1 text-center text-blue-800">
 		<span class="font-p---sm">New here?</span>
     <a href="/register" class="font-p---sm font-semibold text-indigo-700 underline hover:text-indigo-900">
 			Create an account
